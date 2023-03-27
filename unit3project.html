@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
     <title>Idris Nance | English Unit 3 Project</title>
 <style>
 body {
@@ -12,6 +15,11 @@ body {
 </nav>
 </head>
 <body>
+    <div class="mode">
+        Dark mode:             
+        <span class="change">OFF</span>
+    </div>
+
     <h1>Unit 3 Project</h1>
 
     <p>  ChatGPT, or Chat Generative Pre-training Transformer, is an artificial intelligence tool designed for natural
@@ -59,5 +67,18 @@ body {
         human interaction, social skills, and creativity, such as healthcare, education, and creative industries, are less
         at risk of being automated. Nevertheless, employees are encouraged to adapt their skills continually and upskill
         to meet the existing market demands.</p>
+
+    <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "OFF" );
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "ON" );
+            }
+        });
+    </script>
+        
 </body>
 </html>
