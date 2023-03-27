@@ -7,12 +7,59 @@ body {
     font-family: 'Tahoma', sans-serif;
 }
 </style>
+<style>
+    body{
+    padding:10% 3% 10% 3%;
+    text-align:left;
+    }
+    img{
+        height:140px;
+            width:140px; 
+    }
+    h1{
+    color: #ffa023;
+    }
+    .mode {
+        float:right;
+    }
+    .change {
+        cursor: pointer;
+        border: 1px solid #555;
+        border-radius: 40%;
+        width: 20px;
+        text-align: left;
+        padding: 5px;
+        margin-left: 8px;
+    }
+    .dark{
+        background-color: #222;
+        color: #e6e6e6;
+    }
+</style>
 <nav>
     <a href="./unit3project.html">Unit 3 Project</a>
 </nav>
 </head>
 <body>
+    <div class="mode">
+        Dark mode:             
+        <span class="change">OFF</span>
+    </div>
+    <img 
+        src="file:///C:/Users/bball/Downloads/IMG-6284.jpg"></img>
+
     <p>Idris Nance is a 13 year old middle school basketball player and game developer born in New Orleans, LA, and currently residing in the California Bay Area with his parents.</p>
     <p>You can find Idris on Instagram <a href="https://www.instagram.com/idris_molecule/">@idris_molecule</a>. For any enquires he can be reached by <a href="nance.idris2030@gmail.com">nance.idris2030@gmail.com</a>.</p>
+    <script>
+        $(".change").on("click", function () {
+          if ($("body").hasClass("dark")) {
+            $("body").removeClass("dark");
+            $(".change").text("OFF");
+          } else {
+            $("body").addClass("dark");
+            $(".change").text("ON");
+          }
+        });
+    </script>
 </body>
 </html>
